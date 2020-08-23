@@ -1,4 +1,8 @@
 import java.awt.Color;
+import java.io.File;
+import javafx.embed.swing.JFXPanel;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -16,7 +20,10 @@ public class telaPrincipal extends javax.swing.JFrame {
     int busca, contador = 0, j = 0;
     int[] vetor = new int[26];
     GloboDaSorte globo = new GloboDaSorte(1, 26);
+    String caminho;
     
+    final JFXPanel fxPanel = new JFXPanel();
+
     /**
      * Creates new form telaPrincipal
      */
@@ -29,106 +36,132 @@ public class telaPrincipal extends javax.swing.JFrame {
         case 1:
             txtLetra.setText("A");
             lblA.setForeground(Color.red);
+            caminho = "A.mp3";
             break;
         case 2:
             txtLetra.setText("B");
             lblB.setForeground(Color.red);
+            caminho = "B.mp3";
             break;
         case 3:
             txtLetra.setText("C");
             lblC.setForeground(Color.red);
+            caminho = "C.mp3";
             break;
         case 4:
             txtLetra.setText("D");
             lblD.setForeground(Color.red);
+            caminho = "D.mp3";
             break;
         case 5:
             txtLetra.setText("E");
             lblE.setForeground(Color.red);
+            caminho = "E.mp3";
             break;
         case 6:
             txtLetra.setText("F");
             lblF.setForeground(Color.red);
+            caminho = "F.mp3";
             break;
         case 7:
             txtLetra.setText("G");
             lblG.setForeground(Color.red);
+            caminho = "G.mp3";
             break;
         case 8:
             txtLetra.setText("H");
             lblH.setForeground(Color.red);
+            caminho = "H.mp3";
             break;
         case 9:
             txtLetra.setText("I");
             lblI.setForeground(Color.red);
+            caminho = "I.mp3";
             break;
         case 10:
             txtLetra.setText("J");
             lblJ.setForeground(Color.red);
+            caminho = "J.mp3";
             break;
         case 11:
             txtLetra.setText("K");
             lblK.setForeground(Color.red);
+            caminho = "K.mp3";
             break;
         case 12:
             txtLetra.setText("L");
             lblL.setForeground(Color.red);
+            caminho = "L.mp3";
             break;
         case 13:
             txtLetra.setText("M");
             lblM.setForeground(Color.red);
+            caminho = "M.mp3";
             break;
         case 14:
             txtLetra.setText("N");
             lblN.setForeground(Color.red);
+            caminho = "N.mp3";
             break;
         case 15:
             txtLetra.setText("O");
             lblO.setForeground(Color.red);
+            caminho = "O.mp3";
             break;
         case 16:
             txtLetra.setText("P");
             lblP.setForeground(Color.red);
+            caminho = "P.mp3";
             break;
         case 17:
             txtLetra.setText("Q");
             lblQ.setForeground(Color.red);
+            caminho = "Q.mp3";
             break;
         case 18:
             txtLetra.setText("R");
             lblR.setForeground(Color.red);
+            caminho = "R.mp3";
             break;
         case 19:
             txtLetra.setText("S");
             lblS.setForeground(Color.red);
+            caminho = "S.mp3";
             break;
         case 20:
             txtLetra.setText("T");
             lblT.setForeground(Color.red);
+            caminho = "T.mp3";
             break;
         case 21:
             txtLetra.setText("U");
             lblU.setForeground(Color.red);
+            caminho = "U.mp3";
             break;
         case 22:
             txtLetra.setText("V");
             lblV.setForeground(Color.red);
+            caminho = "V.mp3";
             break;
         case 23:
             txtLetra.setText("W");
             lblW.setForeground(Color.red);
+            caminho = "W.mp3";
             break;
         case 24:
             txtLetra.setText("X");
             lblX.setForeground(Color.red);
+            caminho = "X.mp3";
             break;
         case 25:
             txtLetra.setText("Y");
             lblY.setForeground(Color.red);
+            caminho = "Y.mp3";
             break;
         case 26:
             txtLetra.setText("Z");
             lblZ.setForeground(Color.red);
+            caminho = "Z.mp3";
             break;
         }
         return null;
@@ -394,6 +427,11 @@ public class telaPrincipal extends javax.swing.JFrame {
             vetor[j] = globo.sortear();
             System.out.println(vetor[j]);
             letra(vetor[j]);
+            
+            String uriString = new File("C:\\Users\\ARTHUR\\Documents\\GitHub\\Bingo-de-Letras-Java\\musics\\" + caminho).toURI().toString();
+            Media pick = new Media(uriString); 
+            MediaPlayer player = new MediaPlayer(pick); 
+            player.play();
             j++;
         }
     }//GEN-LAST:event_btnSortearActionPerformed
