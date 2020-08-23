@@ -4,5 +4,5 @@
 ## Versão 1:
 Sorteador de Letras para Bingo/Stop
 
-## Versão 2?
+## Versão 2:
 Adicionado som nas letras.
