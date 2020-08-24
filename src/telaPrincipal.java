@@ -1,5 +1,6 @@
 import java.awt.Color;
 import java.io.File;
+import java.util.Arrays;
 import javafx.embed.swing.JFXPanel;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
@@ -206,6 +207,7 @@ public class telaPrincipal extends javax.swing.JFrame {
         lblX = new javax.swing.JLabel();
         lblY = new javax.swing.JLabel();
         lblZ = new javax.swing.JLabel();
+        btnRecomecar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -298,6 +300,13 @@ public class telaPrincipal extends javax.swing.JFrame {
         lblZ.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         lblZ.setText("Z");
 
+        btnRecomecar.setText("Recomeçar");
+        btnRecomecar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRecomecarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -308,7 +317,9 @@ public class telaPrincipal extends javax.swing.JFrame {
                         .addGap(68, 68, 68)
                         .addComponent(btnSortear, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(txtLetra, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txtLetra, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnRecomecar, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -367,16 +378,18 @@ public class telaPrincipal extends javax.swing.JFrame {
                         .addComponent(lblY)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lblZ)))
-                .addContainerGap(253, Short.MAX_VALUE))
+                .addContainerGap(97, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(txtLetra, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-                    .addComponent(btnSortear, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(14, 14, 14)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(txtLetra, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                        .addComponent(btnSortear, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btnRecomecar, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblA)
                     .addComponent(lblB)
@@ -423,6 +436,7 @@ public class telaPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here: 
         if (j > 25) {
             txtLetra.setText("ACABOU!");
+            btnSortear.setEnabled(false);
         } else {
             vetor[j] = globo.sortear();
             System.out.println(vetor[j]);
@@ -435,6 +449,41 @@ public class telaPrincipal extends javax.swing.JFrame {
             j++;
         }
     }//GEN-LAST:event_btnSortearActionPerformed
+
+    private void btnRecomecarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRecomecarActionPerformed
+        // TODO add your handling code here:
+        btnSortear.setEnabled(true);
+        txtLetra.setText("");
+        Arrays.fill(vetor, 0);
+        globo = new GloboDaSorte(1, 26);
+        j = 0;
+        lblA.setForeground(Color.black);
+        lblB.setForeground(Color.black);
+        lblC.setForeground(Color.black);
+        lblD.setForeground(Color.black);
+        lblE.setForeground(Color.black);
+        lblF.setForeground(Color.black);
+        lblG.setForeground(Color.black);
+        lblH.setForeground(Color.black);
+        lblI.setForeground(Color.black);
+        lblJ.setForeground(Color.black);
+        lblK.setForeground(Color.black);
+        lblL.setForeground(Color.black);
+        lblM.setForeground(Color.black);
+        lblN.setForeground(Color.black);
+        lblO.setForeground(Color.black);
+        lblP.setForeground(Color.black);
+        lblQ.setForeground(Color.black);
+        lblR.setForeground(Color.black);
+        lblS.setForeground(Color.black);
+        lblT.setForeground(Color.black);
+        lblU.setForeground(Color.black);
+        lblV.setForeground(Color.black);
+        lblW.setForeground(Color.black);
+        lblX.setForeground(Color.black);
+        lblY.setForeground(Color.black);
+        lblZ.setForeground(Color.black);
+    }//GEN-LAST:event_btnRecomecarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -472,6 +521,7 @@ public class telaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnRecomecar;
     private javax.swing.JButton btnSortear;
     private javax.swing.JLabel lblA;
     private javax.swing.JLabel lblB;

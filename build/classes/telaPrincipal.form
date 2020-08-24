@@ -30,6 +30,8 @@
                       <Component id="btnSortear" min="-2" pref="119" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="txtLetra" min="-2" pref="152" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="btnRecomecar" min="-2" pref="146" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
@@ -103,7 +105,7 @@
                       <Component id="lblZ" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="253" max="32767" attributes="0"/>
+              <EmptySpace pref="97" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -111,11 +113,14 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="txtLetra" pref="50" max="32767" attributes="0"/>
-                  <Component id="btnSortear" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="txtLetra" pref="50" max="32767" attributes="0"/>
+                      <Component id="btnSortear" max="32767" attributes="0"/>
+                  </Group>
+                  <Component id="btnRecomecar" min="-2" pref="58" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="lblA" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="lblB" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -386,6 +391,14 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Z"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnRecomecar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Recome&#xe7;ar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRecomecarActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
