@@ -4,6 +4,7 @@ import java.util.Arrays;
 import javafx.embed.swing.JFXPanel;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
+import javax.swing.JOptionPane;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -452,37 +453,40 @@ public class telaPrincipal extends javax.swing.JFrame {
 
     private void btnRecomecarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRecomecarActionPerformed
         // TODO add your handling code here:
-        btnSortear.setEnabled(true);
-        txtLetra.setText("");
-        Arrays.fill(vetor, 0);
-        globo = new GloboDaSorte(1, 26);
-        j = 0;
-        lblA.setForeground(Color.black);
-        lblB.setForeground(Color.black);
-        lblC.setForeground(Color.black);
-        lblD.setForeground(Color.black);
-        lblE.setForeground(Color.black);
-        lblF.setForeground(Color.black);
-        lblG.setForeground(Color.black);
-        lblH.setForeground(Color.black);
-        lblI.setForeground(Color.black);
-        lblJ.setForeground(Color.black);
-        lblK.setForeground(Color.black);
-        lblL.setForeground(Color.black);
-        lblM.setForeground(Color.black);
-        lblN.setForeground(Color.black);
-        lblO.setForeground(Color.black);
-        lblP.setForeground(Color.black);
-        lblQ.setForeground(Color.black);
-        lblR.setForeground(Color.black);
-        lblS.setForeground(Color.black);
-        lblT.setForeground(Color.black);
-        lblU.setForeground(Color.black);
-        lblV.setForeground(Color.black);
-        lblW.setForeground(Color.black);
-        lblX.setForeground(Color.black);
-        lblY.setForeground(Color.black);
-        lblZ.setForeground(Color.black);
+        int confirm = JOptionPane.showConfirmDialog(rootPane, "Você tem certeza que deseja recomeçar a partida?", "Confirmação", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        if (confirm == JOptionPane.YES_NO_OPTION) {
+            btnSortear.setEnabled(true);
+            txtLetra.setText("");
+            Arrays.fill(vetor, 0);
+            globo = new GloboDaSorte(1, 26);
+            j = 0;
+            lblA.setForeground(Color.black);
+            lblB.setForeground(Color.black);
+            lblC.setForeground(Color.black);
+            lblD.setForeground(Color.black);
+            lblE.setForeground(Color.black);
+            lblF.setForeground(Color.black);
+            lblG.setForeground(Color.black);
+            lblH.setForeground(Color.black);
+            lblI.setForeground(Color.black);
+            lblJ.setForeground(Color.black);
+            lblK.setForeground(Color.black);
+            lblL.setForeground(Color.black);
+            lblM.setForeground(Color.black);
+            lblN.setForeground(Color.black);
+            lblO.setForeground(Color.black);
+            lblP.setForeground(Color.black);
+            lblQ.setForeground(Color.black);
+            lblR.setForeground(Color.black);
+            lblS.setForeground(Color.black);
+            lblT.setForeground(Color.black);
+            lblU.setForeground(Color.black);
+            lblV.setForeground(Color.black);
+            lblW.setForeground(Color.black);
+            lblX.setForeground(Color.black);
+            lblY.setForeground(Color.black);
+            lblZ.setForeground(Color.black);
+        }
     }//GEN-LAST:event_btnRecomecarActionPerformed
 
     /**
